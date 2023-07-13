@@ -12,8 +12,8 @@ const Header = () => {
         </div>
       </Link>
       <nav>
-        <Link href="/career">
-          <div>career</div>
+        <Link href="/portfolio">
+          <div>portfolio</div>
         </Link>
         <Link href="/contact">
           <div>contact</div>
