@@ -1,25 +1,28 @@
 import Link from "next/link";
 import React from "react";
+import MaxWidth from "./MaxWidth";
 
 const Header = () => {
   return (
-    <header className="flex justify-between items-center">
-      <Link href="/">
-        <div>
-          Make insights
-          <br />
-          for the Next
-        </div>
-      </Link>
-      <nav>
-        <Link href="/portfolio">
-          <div>portfolio</div>
+    <MaxWidth>
+      <header className="w-full flex justify-between items-start p-5">
+        <Link href="/">
+          <div className="text-mainColor font-bold text-lg">
+            Make insights
+            <br />
+            for the Next
+          </div>
         </Link>
-        <Link href="/contact">
-          <div>contact</div>
-        </Link>
-      </nav>
-    </header>
+        <nav className="flex gap-5">
+          <Link href="/portfolio">
+            <div className="text-mainColor font-bold">portfolio</div>
+          </Link>
+          <Link href="/contact">
+            <div className="text-mainColor font-bold">contact</div>
+          </Link>
+        </nav>
+      </header>
+    </MaxWidth>
   );
 };
 
