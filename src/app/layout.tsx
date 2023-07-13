@@ -3,6 +3,7 @@ import "./globals.css";
 import type { Metadata } from "next";
 import { Open_Sans } from "next/font/google";
 import Footer from "@/components/layout/Footer";
+import MaxWidth from "@/components/layout/MaxWidth";
 
 const sans = Open_Sans({ subsets: ["latin"] });
 
@@ -17,10 +18,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
-      <body className={sans.className}>
+    <html lang="en" className={sans.className}>
+      <body className="flex flex-col w-full bg-backgroundColor">
         <Header />
-        <main>{children}</main>
+        <main className="grow w-full">{children}</main>
         <Footer />
       </body>
     </html>
