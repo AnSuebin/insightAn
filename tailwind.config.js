@@ -9,7 +9,11 @@ module.exports = {
     extend: {
       colors: {
         mainColor: "#2B99FF",
+        lightMainColor: "64B5FF",
         backgroundColor: "#FCFFD6",
+      },
+      height: {
+        fullScreenExceptHeader: "calc(100vh - 96px)",
       },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",

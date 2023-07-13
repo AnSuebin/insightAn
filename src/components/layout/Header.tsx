@@ -4,25 +4,27 @@ import MaxWidth from "./MaxWidth";
 
 const Header = () => {
   return (
-    <MaxWidth>
-      <header className="w-full flex justify-between items-start p-5">
-        <Link href="/">
-          <div className="text-mainColor font-bold text-lg">
-            Make insights
-            <br />
-            for the Next
-          </div>
-        </Link>
-        <nav className="flex gap-5">
-          <Link href="/portfolio">
-            <div className="text-mainColor font-bold">portfolio</div>
+    <header className="w-full h-30">
+      <MaxWidth>
+        <div className="w-full flex justify-between items-start p-5">
+          <Link href="/">
+            <div className="text-mainColor font-bold text-lg">
+              Make insights
+              <br />
+              for the Next
+            </div>
           </Link>
-          <Link href="/contact">
-            <div className="text-mainColor font-bold">contact</div>
-          </Link>
-        </nav>
-      </header>
-    </MaxWidth>
+          <nav className="flex gap-5">
+            <Link href="/portfolio">
+              <div className="text-mainColor font-bold">portfolio</div>
+            </Link>
+            <Link href="/contact">
+              <div className="text-mainColor font-bold">contact</div>
+            </Link>
+          </nav>
+        </div>
+      </MaxWidth>
+    </header>
   );
 };
 

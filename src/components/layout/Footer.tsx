@@ -3,9 +3,9 @@ import MaxWidth from "./MaxWidth";
 
 const Footer = () => {
   return (
-    <footer className="w-full h-60 relative">
+    <footer className="w-full h-44 relative">
       <MaxWidth>
-        <div className="w-full flex flex-col justify-center relative p-5">
+        <div className="w-full h-full flex flex-col justify-center relative p-5">
           <div className="text-right w-full z-10 text-backgroundColor text-xs">
             다음을 위해 고민하고
             <br />
