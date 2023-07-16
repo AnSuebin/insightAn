@@ -1,6 +1,10 @@
+import { getHomeCareers } from "@/apis/home/home";
 import React from "react";
+import PortfolioTableRow from "../Portfolio/PortfolioTableRow";
 
-const HomeCareerBox = () => {
+const HomeCareerBox = async () => {
+  const careerData = await getHomeCareers();
+
   return (
     <div className="w-full h-screen flex justify-center items-center gap-16">
       <div className="h-full flex items-end w-full mx-40 mb-40">
@@ -8,20 +12,24 @@ const HomeCareerBox = () => {
           <h4 className="text-8xl font-extrabold text-mainColor mb-5 ">
             Career.
           </h4>
-          <table className="table-fixed border-solid w-full">
-            <tbody>
-              <tr>
-                <td className="border-r border-b border-t border-mainColor w-80">
-                  hi
-                </td>
-                <td className="border-b border-t border-mainColor">hi</td>
-              </tr>
-              <tr>
-                <td className="border-r border-b border-mainColor w-80">hi</td>
-                <td className="border-b border-mainColor">hi</td>
-              </tr>
-            </tbody>
-          </table>
+          {careerData.map((careers) => (
+            <>
+              <h6 className="text-mainColor font-bold mb-2 mt-6">
+                {careers.title}
+              </h6>
+              <table className="table-fixed border-solid w-full text-mainColor ">
+                <tbody>
+                  {careers.contents.map((career) => (
+                    <PortfolioTableRow
+                      title={career.duration}
+                      item={career.belongs}
+                      isLineExist
+                    />
+                  ))}
+                </tbody>
+              </table>
+            </>
+          ))}
         </div>
       </div>
     </div>
