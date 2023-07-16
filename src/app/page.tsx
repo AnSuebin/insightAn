@@ -1,14 +1,19 @@
 import FullHightMaxWidth from "@/components/layout/FullHightMaxWidth";
 import MaxWidth from "@/components/layout/MaxWidth";
-import ArrowIcon from "@/icons/arrowIcon";
+import HomePortfolioCard from "@/components/pages/home/HomePortfolioCard";
+import ArrowIcon from "@/icons/ArrowIcon";
+import DownArrowIcon from "@/icons/DownArrowIcon";
 
 export default function HomePage() {
   return (
     <section className="w-full">
       <MaxWidth>
-        <div className="w-full h-screen flex justify-center items-center">
+        <div className="w-full h-screen flex justify-center items-center relative">
           <div className="text-9xl font-extrabold text-mainColor mb-10">
             Insight
+          </div>
+          <div className="absolute bottom-5 left-1/2 -translate-x-1/2">
+            <DownArrowIcon />
           </div>
         </div>
         <div className="w-full h-screen flex flex-col justify-center items-center">
@@ -25,7 +30,20 @@ export default function HomePage() {
             </p>
           </div>
         </div>
-        <div className="w-full h-screen flex flex-col justify-center items-center"></div>
+        <div className="w-full h-screen flex justify-center items-center gap-16">
+          <div className="-translate-y-20">
+            <HomePortfolioCard />
+          </div>
+          <div className="translate-y-20">
+            <HomePortfolioCard />
+          </div>
+          <div className="-translate-y-20">
+            <HomePortfolioCard />
+          </div>
+          <div className="translate-y-20">
+            <HomePortfolioCard />
+          </div>
+        </div>
       </MaxWidth>
     </section>
   );

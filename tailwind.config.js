@@ -14,6 +14,10 @@ module.exports = {
       },
       height: {
         fullScreenExceptHeader: "calc(100vh - 96px)",
+        imageHeight: "454px",
+      },
+      width: {
+        imageWidth: "100%",
       },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
