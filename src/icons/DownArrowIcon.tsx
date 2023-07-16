@@ -17,9 +17,9 @@ const DownArrowIcon: FC<Props> = ({ width = "50", height = "24" }) => {
       <path
         d="M2 2L24.75 21.75L47.5 2"
         stroke="#969696"
-        stroke-width="4"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        strokeWidth="4"
+        strokeLinecap="round"
+        strokeLinejoin="round"
       />
     </svg>
   );
