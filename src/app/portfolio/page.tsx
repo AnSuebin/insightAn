@@ -19,16 +19,18 @@ const PortfolioPage = () => {
           </div>
           <div className="w-full px-4 mt-8">
             <table className="table-fixed border-solid w-full">
-              <tr className="">
-                <td className="border-r border-b border-t border-mainColor">
-                  hi
-                </td>
-                <td className="border-b border-t border-mainColor">hi</td>
-              </tr>
-              <tr>
-                <td className="border-r border-b border-mainColor">hi</td>
-                <td className="border-b border-mainColor">hi</td>
-              </tr>
+              <tbody>
+                <tr className="">
+                  <td className="border-r border-b border-t border-mainColor">
+                    hi
+                  </td>
+                  <td className="border-b border-t border-mainColor">hi</td>
+                </tr>
+                <tr>
+                  <td className="border-r border-b border-mainColor">hi</td>
+                  <td className="border-b border-mainColor">hi</td>
+                </tr>
+              </tbody>
             </table>
           </div>
         </div>
