@@ -4,7 +4,7 @@ import MaxWidth from "./MaxWidth";
 
 const Header = () => {
   return (
-    <header className="w-full h-30">
+    <header className="w-full h-30 fix top-0 absolute">
       <MaxWidth>
         <div className="w-full flex justify-between items-start p-5">
           <Link href="/">
