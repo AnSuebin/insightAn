@@ -9,7 +9,7 @@ const HomeCareerBox = async () => {
     <div className="w-full h-screen flex justify-center items-center gap-16">
       <div className="h-full flex items-end w-full mx-40 mb-40">
         <div>
-          <h4 className="text-8xl font-extrabold text-mainColor mb-5 ">
+          <h4 className="text-8xl font-extrabold text-mainColor mb-7">
             Career.
           </h4>
           {careerData.map((careers) => (
