@@ -2,7 +2,7 @@ import FullHightMaxWidth from "@/components/layout/FullHightMaxWidth";
 import MaxWidth from "@/components/layout/MaxWidth";
 import ArrowIcon from "@/icons/arrowIcon";
 
-export default function Home() {
+export default function HomePage() {
   return (
     <section className="w-full">
       <MaxWidth>
