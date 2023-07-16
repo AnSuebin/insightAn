@@ -1,9 +1,10 @@
 import React from "react";
 import HomePortfolioCard from "./HomePortfolioCard";
+import BottomArrow from "@/components/common/BottomArrow";
 
 const HomePortfolio = () => {
   return (
-    <div className="w-full h-screen flex justify-center items-center gap-16">
+    <div className="relative w-full h-screen flex justify-center items-center gap-16">
       <div className="-translate-y-20">
         <HomePortfolioCard />
       </div>
@@ -16,6 +17,7 @@ const HomePortfolio = () => {
       <div className="translate-y-20">
         <HomePortfolioCard />
       </div>
+      <BottomArrow />
     </div>
   );
 };
