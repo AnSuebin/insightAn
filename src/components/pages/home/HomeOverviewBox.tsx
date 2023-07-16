@@ -1,5 +1,6 @@
 import BottomArrow from "@/components/common/BottomArrow";
 import ArrowIcon from "@/icons/ArrowIcon";
+import Link from "next/link";
 import React from "react";
 
 const HomeOverviewBox = () => {
