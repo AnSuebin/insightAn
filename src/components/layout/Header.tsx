@@ -15,8 +15,11 @@ const Header = () => {
             </div>
           </Link>
           <nav className="flex gap-5">
-            <Link href="/portfolio">
+            <Link href="/">
               <div className="text-mainColor font-bold">portfolio</div>
+            </Link>
+            <Link href="/">
+              <div className="text-mainColor font-bold">career</div>
             </Link>
             <Link href="/contact">
               <div className="text-mainColor font-bold">contact</div>
