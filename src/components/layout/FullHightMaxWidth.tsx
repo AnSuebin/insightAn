@@ -6,7 +6,7 @@ interface Props {
 
 const FullHightMaxWidth: FC<Props> = ({ children }) => {
   return (
-    <div className="flex w-full h-full max-w-screen-2xl m-auto">{children}</div>
+    <div className="w-full h-full max-w-screen-2xl m-auto">{children}</div>
   );
 };
 
