@@ -16,7 +16,7 @@ const PortfolioPage: FC<Props> = async ({ params: { slug } }) => {
 
   return (
     <FullHightMaxWidth>
-      <div className="flex w-full h-screen gap-6 justify-between pt-[120px] pb-14 px-4 box-border ">
+      <div className="flex w-full h-screen gap-6 justify-between pt-[120px] pb-14 px-4 box-border">
         <div className="flex-1 bg-indigo-500"></div>
         <div className="flex-1">
           <div className="text-mainColor">
