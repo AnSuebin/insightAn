@@ -1,19 +1,112 @@
-import path from "path";
 import { IPortfolio } from "./portfolio.type";
-import { readFile } from "fs/promises";
 
-export const getSelectPortfolios = async (id: number): Promise<IPortfolio> => {
-  return getAllPortfolios().then(
-    (portfolio) => portfolio.filter((portfolio) => portfolio.id === id)[0]
-  );
-};
-
-export const getAllPortfolios = async (): Promise<IPortfolio[]> => {
-  const filePath = path.join(
-    process.cwd(),
-    "data",
-    "portfolio",
-    "portfolioDetails.json"
-  );
-  return readFile(filePath, "utf-8").then<IPortfolio[]>(JSON.parse);
-};
+export const portfolioList: IPortfolio[] = [
+  {
+    id: 1,
+    title: "폼폼폼",
+    about: [
+      "기존 설문조사 제작 사이트의 불편한 사용성 개선,",
+      "직관적이고 사용하기 편리한 설문조사 제작 페이지",
+    ],
+    contents: {
+      summary: {
+        period: { start: "2022.12.30", end: "2023.02.10" },
+        participants: "프론트엔드 2명, 백엔드 3명, 디자이너 2명",
+        part: "부리더 담당, 프론트엔드 개발자, 배포, 메인 페이지, 제작 페이지, 마이페이지, 설문 응답 페이지, 통계 페이지",
+        skills:
+          "React, Styled-Component, Redux Toolkit, Axios Apex-chart, React-beautiful-dnd, AmzonS3, CloudFront",
+      },
+      goal: [
+        "하나의 아이콘, 하나의 버튼도 높은 사용성을 제공하고자 노력",
+        " 테스트 배포를 통해 80개의 사용자 의견을 받아, UI•UX 약 30항목 리뉴얼",
+      ],
+      makePoint: [
+        "Typescript 마이그레이션 진행중",
+        "Apex-charts 라이브러리 활용, 다이나믹한 그래프 구현",
+        "Redux-toolkit 활용, 실시간 리스트 미리보기 기능 구현",
+        "React-beautiful-dnd 활용, 순위 드래그 앤 드롭 기능 구현 • React-intersection-observer 활용, 무한 스크롤 기능 구현 • SSE활용,실시간응답자수현황기능구현",
+        "Media query 활용, 반응형 페이지 구현",
+        "Amazon S3 활용 배포 및 Cloud Front 활용 https 처리",
+      ],
+    },
+  },
+  {
+    id: 2,
+    title: "국민은행 액티브 시니어 타겟 온보딩 페이지",
+    about: [
+      "액티브 시니어를 타겟으로 은행 앱 사용을 돕고자 하는",
+      "인터렉티브 컨셉 온보딩 페이지 제작",
+    ],
+    contents: {
+      summary: {
+        period: { start: "2022.10", end: "2022.10" },
+        participants: "프론트엔드 1명, 기획자 2명, 디자이너 1명",
+        part: "1인 프론트엔드 개발",
+        skills: "React, Typescript, GitAction, Styled-Component, Lottie-react",
+      },
+      makePoint: [
+        " Typescript 마이그레이션",
+        " Lottie-react 라이브러리 활용, 일러스트 애니메이션 도입",
+        " setInterval 활용, typing Text 기능 구현",
+        " setTimeout과 애니메이션 속성 활용, 구성 요소 별 출현 포인트 조절",
+        "Github Action, Github Pages를 통한 CI CD 구현 • Figma를 통한 디자이너와의 협업",
+        "프로젝트 기획 단계, 인터렉티브 버튼 모음집 제작",
+        "(스위치 / 드래그 앤 드롭 / 캐러셀)",
+      ],
+    },
+  },
+  {
+    id: 3,
+    title: "탐나예",
+    about: [
+      "교육생 4명이 회의실 수기 예약 방식의 불편함을 개선하고자 만든,",
+      "제주 더 큰 내일 센터, 실사용 공식 회의실 예약 시스템",
+    ],
+    contents: {
+      summary: {
+        period: { start: "2022.08", end: "2022.09" },
+        participants: "프론트엔드 3명, 백엔드 1명",
+        part: "프론트엔드 개발, 메인 페이지 • 예약 현황 페이지• 세부 사항 변경 어드민 페이지 구현",
+        skills: "React, Fetch, CSS-Module",
+      },
+      goal: [
+        "실사용을 고려하여, 센터와 교육생의 특성에 맞게 기능 제작",
+        "이미지 지도에서 만료 기능이 추가된 지도로 수정, 어드민 페이지 구현",
+      ],
+      makePoint: [
+        "센터회의실사용시간및공간맞춤,회의실예약만료기능구현",
+        "예약현황을한눈에확인할수있는센터지도구현,예약만료기능적용",
+        "모바일에서 간편하게 사용할 수 있도록, 반응형 페이지 구현",
+      ],
+    },
+  },
+  {
+    id: 4,
+    title: "폼폼폼",
+    about: [
+      "기존 설문조사 제작 사이트의 불편한 사용성 개선,",
+      "직관적이고 사용하기 편리한 설문조사 제작 페이지",
+    ],
+    contents: {
+      summary: {
+        period: { start: "2022.12.30", end: "2023.02.10" },
+        participants: "프론트엔드 2명, 백엔드 3명, 디자이너 2명",
+        part: "부리더 담당, 프론트엔드 개발자, 배포, 메인 페이지, 제작 페이지, 마이페이지, 설문 응답 페이지, 통계 페이지",
+        skills:
+          "React, Styled-Component, Redux Toolkit, Axios Apex-chart, React-beautiful-dnd, AmzonS3, CloudFront",
+      },
+      goal: [
+        "하나의 아이콘, 하나의 버튼도 높은 사용성을 제공하고자 노력",
+        " 테스트 배포를 통해 80개의 사용자 의견을 받아, UI•UX 약 30항목 리뉴얼",
+      ],
+      makePoint: [
+        "Typescript 마이그레이션 진행중",
+        "Apex-charts 라이브러리 활용, 다이나믹한 그래프 구현",
+        "Redux-toolkit 활용, 실시간 리스트 미리보기 기능 구현",
+        "React-beautiful-dnd 활용, 순위 드래그 앤 드롭 기능 구현 • React-intersection-observer 활용, 무한 스크롤 기능 구현 • SSE활용,실시간응답자수현황기능구현",
+        "Media query 활용, 반응형 페이지 구현",
+        "Amazon S3 활용 배포 및 Cloud Front 활용 https 처리",
+      ],
+    },
+  },
+];

@@ -1,4 +1,4 @@
-import { getSelectPortfolios } from "@/apis/portfolio/portfolio";
+import { portfolioList } from "@/apis/portfolio/portfolio";
 import FullHightMaxWidth from "@/components/layout/FullHightMaxWidth";
 import PortfolioTableListRow from "@/components/pages/Portfolio/PortfolioTableListRow";
 import PortfolioTableRow from "@/components/pages/Portfolio/PortfolioTableRow";
@@ -11,8 +11,12 @@ interface Props {
 }
 
 const PortfolioPage: FC<Props> = async ({ params: { slug } }) => {
-  const portfolioData = await getSelectPortfolios(+slug);
+  const portfolioData =
+    portfolioList.find((portfolio) => {
+      return portfolio.id === +slug;
+    }) || portfolioList[0];
   const portfolioSummary = portfolioData.contents.summary;
+  const portfolioAbout = portfolioData.about;
 
   return (
     <FullHightMaxWidth>
@@ -26,7 +30,7 @@ const PortfolioPage: FC<Props> = async ({ params: { slug } }) => {
                 {portfolioData.title}
               </div>
             </div>
-            {portfolioData.about.map((item) => (
+            {portfolioAbout.map((item) => (
               <p className="font-semibold">{item}</p>
             ))}
           </div>

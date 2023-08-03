@@ -1,10 +1,8 @@
-import { getHomeCareers } from "@/apis/home/home";
+import { careerList } from "@/apis/home/home";
 import React from "react";
 import PortfolioTableRow from "../Portfolio/PortfolioTableRow";
 
 const HomeCareerBox = async () => {
-  const careerData = await getHomeCareers();
-
   return (
     <div className="w-full h-screen flex justify-center items-center gap-16">
       <div className="h-full flex items-end w-full mx-40 mb-40">
@@ -12,7 +10,7 @@ const HomeCareerBox = async () => {
           <h4 className="text-8xl font-extrabold text-mainColor mb-7">
             Career.
           </h4>
-          {careerData.map((careers) => (
+          {careerList.map((careers) => (
             <>
               <h6 className="text-mainColor font-bold mb-2 mt-6">
                 {careers.title}

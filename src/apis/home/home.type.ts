@@ -10,7 +10,7 @@ export interface IHomeCareer {
 }
 
 export interface IContents {
-  id: 1;
+  id: number;
   duration: string;
   belongs: string;
 }
